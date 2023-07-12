@@ -2,12 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>com.mycompany</groupId>
-		<artifactId>parent-pom</artifactId>
-		<version>1.0.0-GC-TEST</version>
-		<relativePath/>
-	</parent>
+
 	<groupId>com.mycompany</groupId>
 	<artifactId>hellomule-secureproperties</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
@@ -19,9 +14,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<app.runtime>4.4.0-20220722</app.runtime>
-		<!-- mule.maven.plugin.version>3.8.0</mule.maven.plugin.version>
-		<mule.version>4.4.0</mule.version>  -->
-	</properties>
+		<mule.maven.plugin.version>3.8.6</mule.maven.plugin.version>
+        <mule-http-connector-version>1.5.23</mule-http-connector-version>
+  	</properties>
 
 	<build>
 		<plugins>
