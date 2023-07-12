@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="hellomule-securepropertiesFlow" doc:id="87ce5702-1844-4258-833f-4c0e253d3e98" >
+		<http:listener doc:name="Listener" doc:id="515c6042-4e9a-4083-b8aa-b3a56fee1572" config-ref="HTTP_Listener_config" path="/hello"/>
+		<set-payload value="This is Test Flow" doc:name="Set Payload" doc:id="70c76848-40f3-4686-a5cc-127c2763aae7" />
+		<logger level="INFO" doc:name="Logger" doc:id="583f356a-f75b-4864-9ea5-2e3052782b73" message='#[output application/java&#10;---&#10;&#10;"*** Hello World Application ***\nDisplaying Secure Properties\n\n Username:" ++ Mule::p("secure::sfdc.username") default ""&#10;++ " -- " ++&#10;"Password: Do not display password \n" &#10;//++ Mule::p("secure::sfdc.password") default "" ++]'/>
+	</flow>
+</mule>
